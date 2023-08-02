@@ -44,16 +44,21 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="title">Adicione itens de infraestrutura</label>
-            <div class="form-group">
+              <div class="form-group">
                 <input type="checkbox" name="items[]" value="Palco">Palco
             </div>
         </div>
         <div class="form-group">
-            <label for="title">Adicione itens de infraestrutura</label>
-            <div class="form-group">
-                <input type="checkbox" name="items[]" value="Cerveja Grátis">Cerveja Grátis
-            </div>
+            
+            <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Cerveja grátis"> Cerveja grátis
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Open Food"> Open food
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Brindes"> Brindes
+      </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Criar evento">
 

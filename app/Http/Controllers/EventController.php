@@ -27,7 +27,8 @@ class EventController extends Controller
     }
 
     public function store(Request $request) {
-
+       
+        
         $event = new Event;
 
         $event->title = $request->title;
@@ -52,13 +53,14 @@ class EventController extends Controller
             $event->image = $imageName;
 
         }
-           $user= auth()->user();
-           $event->user_id= $user->id;
-           
+         
+        $user = auth()->user();
+        $event->user_id = $user->id;
+
         $event->save();
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
-
+    
     }
 
     public function show($id){
