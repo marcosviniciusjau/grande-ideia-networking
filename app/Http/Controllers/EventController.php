@@ -8,27 +8,37 @@ use App\Models\Event;
 
 class EventController extends Controller
 {
-    public function index(){
+    
+    public function index() {
 
-        $search= request('search');
+        $search = request('search');
 
-        if($search){
-            $events= Event::where([
-                ['title','like','%'.$search.'%']
+        if($search) {
+
+            $events = Event::where([
+                ['title', 'like', '%'.$search.'%']
             ])->get();
-        } else{
-         $events= Event::all();
-        }
-        return view('welcome',['events'=>$events,'search'=>$search]);
+
+        } else {
+            $events = Event::all();
+        }        
+    
+        return view('dashboard',['events' => $events, 'search' => $search]);
+
+    }
+   public function home() {
+
+    
+        return view('welcome');
+
     }
 
-    public function create(){
+    public function create() {
         return view('events.create');
     }
 
     public function store(Request $request) {
-       
-        
+
         $event = new Event;
 
         $event->title = $request->title;
@@ -37,7 +47,6 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->description = $request->description;
         $event->items = $request->items;
-
 
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {
@@ -53,21 +62,20 @@ class EventController extends Controller
             $event->image = $imageName;
 
         }
-         
+
         $user = auth()->user();
         $event->user_id = $user->id;
 
         $event->save();
 
-        return redirect('/')->with('msg', 'Evento criado com sucesso!');
-    
     }
 
-    public function show($id){
+    public function show($id) {
 
-     $event= Event::findOrFail($id);
+        $event = Event::findOrFail($id);
 
-     return view('events.show', ['event'=> $event]);
-
+        return view('events.show', ['event' => $event]);
+        
     }
+
 }

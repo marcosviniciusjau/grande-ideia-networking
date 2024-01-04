@@ -15,8 +15,13 @@
                 <nav class="navbar navbar-expand-lg navbar-light">
                  <div class="collapse navbar-collapse" id="navbar">
                   <a href="/" class="navbar-brand">
-                    <img src="/img/hdcevents_logo.svg" alt="hdcevents">
+                    <img src="/img/ideia.png" alt="grandeideia">
                      </a>
+                       <ul class="nav">
+                        <li class="nav-item">
+                            Grande Ideia Networking
+                        </li>
+                      </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="/" class="nav-link">Eventos</a>
@@ -61,7 +66,8 @@
                 </div>
            </main>
         <footer>
-        <p>HDC Events &copy;2023</p>
+        <p>
+<p>Copyright &copy; Grande Ideia Networking</p></p>
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
