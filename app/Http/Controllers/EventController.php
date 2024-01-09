@@ -24,10 +24,8 @@ class EventController extends Controller
         }        
     
         return view('dashboard',['events' => $events, 'search' => $search]);
-
     }
    public function home() {
-
     
         return view('welcome');
 
@@ -37,7 +35,7 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    public function store(Request $request) {
+    public function save(Request $request) {
 
         $event = new Event;
 
@@ -63,11 +61,13 @@ class EventController extends Controller
 
         }
 
-        $user = auth()->user();
-        $event->user_id = $user->id;
+        $user = 1;
+        $event->user_id = 1;
 
         $event->save();
 
+        
+        return redirect()->intended('dashboard');
     }
 
     public function show($id) {

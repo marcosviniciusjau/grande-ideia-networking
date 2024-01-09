@@ -1,47 +1,34 @@
+@extends('layouts.main')
 
-    
-               <center><img src="/img/ideia.png" alt="grandeideia" width="200px"></center>
- 
+@section('title', 'Grande Ideia Networking')
 
-    
-       <center> <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Meus Eventos') }}
-        </h2></center>
-   
+@section('content')
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
-    *{
-        font-family: 'Lato', sans-serif;
-        font-weight:bold;
-    }
-    body{
-        background-image:url("./img/fundo_login.png");
-        background-repeat: no-repeat;
-        background-size:cover;
-    }
-    .entrar{
-        font-family: 'Lato', sans-serif;
-        font-size:medium;
-        width:15%;
-        height:5%;
-        border-radius:25px;
-        background-color:#f2a340;
-        border-color:#f2a340;
-        text-decoration:none;
-    }
-    #name,#email,#password,#password_confirmation{
-        border-radius: 20px;
-        height:5%;
-    }
-    #cards-container{
-        display:flex;
-        justify-content:center;
-    }
+<!DOCTYPE html>
 
-    </style>
+<html lang="pt-br">
 
-    <div id="cards-container" class="row">
+<head>
+
+<title>
+  Grande Ideia Networking
+  
+</title>
+
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+</header>
+<h1> Meus Eventos</h1>
+  <div id="cards-container" class="row">
         @foreach($events as $event)
         <div class="card col-md-3">
             <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
@@ -54,3 +41,14 @@
         </div>
         @endforeach
 
+
+<footer>
+
+
+</footer>
+
+</body>
+
+</html>
+
+@endsection
