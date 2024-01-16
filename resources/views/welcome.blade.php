@@ -12,12 +12,12 @@
 
 <title>
   Grande Ideia Networking
-  
 </title>
-
+<link rel="icon" href="/img/logo.png" type="image/icon type">
+    
 
 <meta charset="UTF-8">
-
+ 
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -62,8 +62,9 @@
 <img src="/img/2.png" id="eventos">
 
 <div class="sobre">
-<img src="/img/sobre.jpg" id="img">
-
+<div class="img-sobre">
+  <img src="/img/sobre.jpg" id="img">
+</div>
 <div class="paragrafos">
 <h2>Sobre nós</h2>
 <p>A Grande Ideia Networking é uma empresa de eventos corporativos sediada em Jaú, São Paulo. Somos especialistas em criar eventos que conectam pessoas e ideias, gerando oportunidades de negócios e relacionamentos.</p>
@@ -92,10 +93,7 @@
 <p>Empresa de varejo que organizou um evento de relacionamento com seus clientes</p>
 </div>
 
-<div class="eventos1">
-<img id="circulo" src="/img/inova.png" class="thumbnail">
-<p>Empresa de pesquisa que organizou um evento de inovação para discutir tendências futuras</p>
-</div>
+
 </ul>
 
 </div>
