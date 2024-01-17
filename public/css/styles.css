@@ -31,11 +31,15 @@ header {
 
 @media (max-width: 500px) {
     #img {
+        margin-top:50px;
         margin-left: 15px;
-        max-width: 100px;
+        max-width: 200px;
     }
     .nav {
     font-size: large;
+}
+#pc{
+  display:none;
 }
 
 }
@@ -43,6 +47,7 @@ header {
 #navbar_img {
     width: 100px;
 }
+
 @media (min-width: 500px) {
     .titulos {
         margin-top: 5px;
@@ -155,12 +160,15 @@ header {
     justify-content: space-between;
 }
 
-#navbar a {
-    font-size: 14px;
+.nav-link {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
     color: #f2a340;
 }
 
 #navbar a:hover {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
     color: #f2a340;
 }
 
