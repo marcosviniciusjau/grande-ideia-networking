@@ -15,20 +15,20 @@
         </head>
         <body>
           <header>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/"><img src="/img/ideia.png" alt="grandeideia" id="navbar_img"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-       <img src="/img/ideia.png" alt="grandeideia" id="navbar_img">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/"> Grande Ideia Networking</a>
+         
         </li>
      
       </ul>
-      <ul class="navbar-nav">
+    <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="/events/create" class="nav-link">Criar Eventos</a>
                 </li>
@@ -149,7 +149,7 @@
                 <x-label for="email" value="{{ __('Email') }}" />
                 <br>
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-                 <br>
+              
             </div>
 
             <div class="mt-4">
@@ -160,13 +160,13 @@
             </div>
 
             <div class="block mt-4">
-                 <br>
+            
                 <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" />
                     <span class="ms-2 text-sm text-gray-600">{{ __('Lembrar de mim') }}</span>
                 </label>
             </div>
- <br>
+
             <div class="flex items justify-end mt-4" id="senha">
                 @if (Route::has('password.request'))
                     <a class=" text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
