@@ -9,7 +9,7 @@ use App\Models\User;
 
 class EventController extends Controller
 {
-    
+   
     public function index() {
 
         $search = request('search');
@@ -23,9 +23,12 @@ class EventController extends Controller
         } else {
             $events = Event::all();
         }        
-    
+        $user = auth()->user();
+
+        $events = $user->events;
         return view('dashboard',['events' => $events, 'search' => $search]);
     }
+
    public function home() {
     
         return view('welcome');
@@ -115,5 +118,14 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg','Evento editado com sucesso!'); 
         
+    }
+
+    public function joinEvent($id) {
+
+        $user= auth()->user();
+        $user->eventsAsParticipant()->attach($id);
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg','Sua presença está confirmada no evento: '. $event->title);
     }
 }

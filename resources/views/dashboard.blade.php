@@ -29,6 +29,12 @@
 
 </header>
 <h1> Meus Eventos</h1>
+<div class="col-md-10 offset-md-1 dashboard-events-container">
+    @if(count($events) > 0)
+    @else
+    <p>Você ainda não tem eventos, <a href="/events/create">criar evento</a></p>
+    @endif
+</div>   
   <div id="cards-container" class="row">
         @foreach($events as $event)
         <div class="card col-md-3">
@@ -36,7 +42,7 @@
             <div class="card-body">
                 <p class="card-date">{{ date('d/m/Y',strtotime($event->date)) }}</p>
                 <h5 class="card-title">{{ $event->title }}</h5>
-                <p class="card-participants">X Participantes</p>
+                <p class="card-participants"> {{count($event->users)  }} Participantes</p>
 
                 <a href="/events/{{$event->id}}" class="btn btn-primary botao-enviar">Saber mais</a>
                  <div class="btn-group dropend" role="group">
@@ -69,7 +75,8 @@
       </div>
     </div>
   </div>
-</div>   
+</div>
+
             </div>
         </div>
         @endforeach
