@@ -13,8 +13,6 @@
 <title>
   Grande Ideia Networking
 </title>
-<link rel="icon" href="/img/icon.png" type="image/icon type">
-    
 
 <meta charset="UTF-8">
  

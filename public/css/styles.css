@@ -111,12 +111,12 @@ header {
     padding: 0;
 }
 
-.btn-primary {
+.botao-enviar {
     background-color: #f2a340;
     border: 2px solid #f2a340;
 }
 
-.btn-primary:hover {
+.botao-enviar:hover {
     background-color: #f2a340;
     border-color: #f2a340;
 }
@@ -204,7 +204,13 @@ header {
     color: #757575;
     margin-bottom: 30px;
 }
-
+#description_container{
+  margin-top:30px;
+}
+#more{
+    display:inline;
+    place-items:center;
+}
 #cards-container {
     display: flex;
 }
