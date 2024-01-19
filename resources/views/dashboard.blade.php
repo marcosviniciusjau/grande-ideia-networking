@@ -45,7 +45,7 @@
                 </span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#"><ion-icon name="create-outline"></ion-icon>Editar</a></li>
+      <li><a class="dropdown-item" href="/events/edit/{{$event->id}}"><ion-icon name="create-outline"></ion-icon>Editar</a></li>
       <form action="/events/{{$event->id}}"method="POST">
         @csrf
         @method('DELETE')
