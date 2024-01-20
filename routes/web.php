@@ -17,7 +17,7 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'home']);
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
-Route::get('/events/{id}', [EventController::class, 'show'])->middleware('auth');
+Route::get('/events/{id}', [EventController::class, 'show']);
 Route::post('/events', [EventController::class, 'save']);
 Route::delete('/events/{id}', [EventController::class, 'destroy'])->middleware('auth');
 Route::get('/events/edit/{id}', [EventController::class, 'edit'])->middleware('auth');

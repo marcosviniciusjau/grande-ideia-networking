@@ -26,12 +26,29 @@ class EventController extends Controller
         $user = auth()->user();
 
         $events = $user->events;
-        return view('dashboard',['events' => $events, 'search' => $search]);
+
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        return view('/dashboard', 
+            ['events' => $events, 'eventsasparticipant' => $eventsAsParticipant]
+        );
     }
 
    public function home() {
-    
-        return view('welcome');
+     $search = request('search');
+
+        if($search) {
+
+            $events = Event::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+
+        } else {
+            $events = Event::all();
+        }        
+
+        return view('welcome', 
+            ['events' => $events  ,'search' => $search]);
 
     }
 
@@ -65,8 +82,8 @@ class EventController extends Controller
 
         }
 
-        $user = 1;
-        $event->user_id = 1;
+       $user = auth()->user();
+        $event->user_id = $user->id;
 
         $event->save();
 
@@ -84,15 +101,18 @@ class EventController extends Controller
     }
 
     public function destroy($id){
-
-       Event::findOrFail($id)->delete();
+        $event = Event::findOrFail($id);
+        $event->users()->detach(); 
+        $event->delete();
 
        return redirect('/dashboard')->with('msg','Evento excluído com sucesso!'); 
     }
 
     public function edit($id) {
-
+        $user= auth()->user();
         $event = Event::findOrFail($id);
+
+        if($user-> id)
 
         return view('events.edit', ['event' => $event]);
     }

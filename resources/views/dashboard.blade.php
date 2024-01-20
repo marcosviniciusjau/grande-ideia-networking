@@ -29,13 +29,27 @@
 
 </header>
 <h1> Meus Eventos</h1>
+
 <div class="col-md-10 offset-md-1 dashboard-events-container">
-    @if(count($events) > 0)
+  <table>
+  <tbody>
+    @if(count($eventsasparticipant) > 0)
+       @foreach($eventsasparticipant as $event)
+     <tr> 
+<td>{{count($event->users)}}</td>
+<td>{{ date('d/m/Y',strtotime($event->date)) }}</td>
+<td>{{ $event->title }}</td>
+</tr>
+</tbody>
+</table>
+
+ @endforeach
     @else
-    <p>Você ainda não tem eventos, <a href="/events/create">criar evento</a></p>
+    <p>Você ainda não está participando de nenhum evento <a href="/">ver todos os evento</a></p>
     @endif
-</div>   
+</div>      
   <div id="cards-container" class="row">
+      @if(count($events) > 0)
         @foreach($events as $event)
         <div class="card col-md-3">
             <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
@@ -80,7 +94,9 @@
             </div>
         </div>
         @endforeach
-
+   @else
+    <p>Você ainda não tem eventos, <a href="/events/create">criar eventos</a></p>
+    @endif
 
 <footer>
 
