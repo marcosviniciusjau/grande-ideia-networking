@@ -1,66 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<center>![ideia]<img src="https://github.com/marcosviniciusjau/hdcevents/assets/82465988/6edd6a2b-1fe9-490d-9028-c61d0339dba8"/></center>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Grande Ideia Networking
+Gande Ideia Networking is a website that allows users to create, update, and delete events. The website is built with the Laravel framework.
 
-## About Laravel
+# Technical Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The website uses the following technical features to implement the event management functionality:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Model-View-Controller (MVC) architecture
+# Eloquent ORM
+# Validation
+# MVC Architecture
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The MVC architecture separates the website into three layers:
 
-## Learning Laravel
+# Model: The model layer represents the data and logic for the events.
+# View: The view layer renders the HTML for the website.
+Controller: The controller layer handles the requests from the user and interacts with the model layer.
+Eloquent ORM
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Eloquent is a Laravel ORM that provides an object-oriented interface for interacting with the database. The website uses Eloquent to create, update, and delete events.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Validation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Validation is used to ensure that the data submitted by the user is valid. The website uses Laravel's built-in validation features to validate the data submitted for events.
 
-## Laravel Sponsors
+# Usage
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+To use the event management functionality, users must first create an account. Once they have created an account, they can create new events. To create a new event, users must provide the following information:
 
-### Premium Partners
+Title: The title of the event.
+Description: A description of the event.
+Date: The date of the event.
+Time: The time of the event.
+Location: The location of the event.
+Once an event has been created, users can update it or delete it. To update an event, users must provide the new information for the event. To delete an event, users must click the "Delete" button.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+# Conclusion
 
-## Contributing
+Grande Ideia Networking is a website that provides a simple and easy-to-use way for users to create, update, and delete events. The website is built with the Laravel framework and uses a variety of technical features to implement the functionality.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Demonstrative Video:
+https://github.com/marcosviniciusjau/hdcevents/assets/82465988/2a844c8f-b037-48df-8b9c-eb2f01885fee
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
