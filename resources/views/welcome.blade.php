@@ -57,6 +57,7 @@
 <h5>Próximos eventos</h5>
   @foreach($events as $event)
     <a href="/events/{{$event->id}}"><img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" id="eventos"></a>
+
 @endforeach
 <div class="sobre">
 <div class="img-sobre">

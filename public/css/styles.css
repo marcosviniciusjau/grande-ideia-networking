@@ -20,10 +20,54 @@ header {
 }
 .sobre {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 30px;
 }
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+    *{
+        font-family: 'Lato', sans-serif;
+        font-weight:bold;
+    }
 
+  @media(min-width:500px){
+     aside.imagem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+  }
+
+  aside.imagem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 150px;
+    }
+
+    .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .entrar{
+        width: 232px;
+        line-height:48px;
+        font-family: 'Lato', sans-serif;
+        font-size:medium;
+        border-radius:6px;
+        background-color:#f2a340;
+        border-color:#f2a340;
+        text-decoration:none;
+        
+    }
+  
+    #name,#email,#password,#password_confirmation{
+        line-height:2.5rem;
+        width:270px;
+        border-radius: 4px;
+        font-size:medium;
+        
+    }
 #img {
     margin-left: 15px;
     max-width: 400px;
@@ -40,6 +84,10 @@ header {
 }
 #pc{
   display:none;
+}
+#eventos {
+    width: 50%;
+    height: 50%;
 }
 
 }
@@ -129,7 +177,9 @@ header {
     padding: 10px;
     width: 275px;
 }
-
+#events-created{
+    margin-top:25px;
+}
 .nav {
     margin-left: -450px;
     font-size: large;
@@ -228,7 +278,9 @@ header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+.img_foreach{
+    display:flex;
+}
 .img_preview{
     width:100px;
     margin-top:20px;

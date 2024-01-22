@@ -12,7 +12,7 @@
 
     <div class="form-group">
       <label for="image">Imagem do Evento:</label>
-      <input type="file" id="image" name="image" class="from-control-file" required>
+      <input type="file" id="image" name="image" class="from-control-file">
       <img src="/img/events/{{$event->image}}" alt="{{$event->title}}" class="img_preview">
     </div>
 

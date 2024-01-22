@@ -9,7 +9,8 @@
 <html lang="pt-br">
 
 <head>
-
+ <link rel="icon" href="/img/icon.png" type="image/icon type">
+    
 <title>
   Grande Ideia Networking
 </title>
@@ -28,26 +29,34 @@
 <header>
 
 </header>
-<h1> Meus Eventos</h1>
+<h1>Eventos que estou participando</h1>
+<div id="cards-container" class="row">
+      @if(count($eventsasparticipant) > 0)
+        @foreach($eventsasparticipant as $event)
+        <div class="card col-md-3">
+            <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
+            <div class="card-body">
+                <p class="card-date">{{ date('d/m/Y',strtotime($event->date)) }}</p>
+                <h5 class="card-title">{{ $event->title }}</h5>
+                <p class="card-participants"> {{count($event->users)  }} Participantes</p>
 
-<div class="col-md-10 offset-md-1 dashboard-events-container">
-  <table>
-  <tbody>
-    @if(count($eventsasparticipant) > 0)
-       @foreach($eventsasparticipant as $event)
-     <tr> 
-<td>{{count($event->users)}}</td>
-<td>{{ date('d/m/Y',strtotime($event->date)) }}</td>
-<td>{{ $event->title }}</td>
-</tr>
-</tbody>
-</table>
+                <form action="/events/leave/{{$event->id}}" method="post">
+                @csrf
+                @method("DELETE")
+                <button type="submit" class="btn btn-danger delete-btn">sair
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </form>
+  </div>
+  
 
- @endforeach
-    @else
-    <p>Você ainda não está participando de nenhum evento <a href="/">ver todos os evento</a></p>
+            </div>
+        </div>
+        @endforeach
+   @else
+    <p>Você ainda não está participando de nenhum evento, <a href="/">Ver eventos</a></p>
     @endif
-</div>      
+<h1 id="events-created">Eventos que eu criei</h1>
   <div id="cards-container" class="row">
       @if(count($events) > 0)
         @foreach($events as $event)
@@ -64,6 +73,7 @@
                 more_vert
                 </span>
     </button>
+
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="/events/edit/{{$event->id}}"><ion-icon name="create-outline"></ion-icon>Editar</a></li>
       <form action="/events/{{$event->id}}"method="POST">
@@ -90,7 +100,6 @@
     </div>
   </div>
 </div>
-
             </div>
         </div>
         @endforeach
