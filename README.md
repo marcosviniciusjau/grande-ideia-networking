@@ -1,3 +1,5 @@
+<center>![ideia](https://github.com/marcosviniciusjau/hdcevents/assets/82465988/6edd6a2b-1fe9-490d-9028-c61d0339dba8)</center>
+
 # Grande Ideia Networking
 Gande Ideia Networking is a website that allows users to create, update, and delete events. The website is built with the Laravel framework.
 
