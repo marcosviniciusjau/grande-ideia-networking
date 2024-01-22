@@ -1,7 +1,7 @@
 # Grande Ideia Networking
-ande Ideia Networking is a website that allows users to create, update, and delete events. The website is built with the Laravel framework.
+Gande Ideia Networking is a website that allows users to create, update, and delete events. The website is built with the Laravel framework.
 
-#Technical Features
+# Technical Features
 
 The website uses the following technical features to implement the event management functionality:
 
